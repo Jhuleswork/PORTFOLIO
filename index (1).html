@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Jhules Bryan Awali — Customer Support, Virtual Assistance, Social Media Design and Web Development Portfolio.">
+<title>Jhules Bryan Awali | 3D Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#08090d;--panel:#101219;--panel2:#151923;--text:#f4f4f7;--muted:#9a9eaa;--purple:#a78bfa;--cyan:#70e1d1;--line:rgba(255,255,255,.12);--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 50% -20%,#29223f 0,transparent 43%),radial-gradient(ellipse at 90% 60%,rgba(40,92,100,.12),transparent 35%),#08090d}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;background-image:radial-gradient(1px 1px at 10% 20%,#fff 98%,transparent),radial-gradient(1px 1px at 70% 30%,#b7a5ff 98%,transparent),radial-gradient(1px 1px at 35% 80%,#fff 98%,transparent),radial-gradient(2px 2px at 85% 75%,#fff 98%,transparent);background-size:230px 190px,310px 250px,270px 220px,390px 330px;animation:stars 24s linear infinite}
+@keyframes stars{to{background-position:230px 190px,-310px 250px,270px -220px,-390px 330px}}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(8,9,13,.72);backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{border-color:var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:700;letter-spacing:.04em}.brand span{color:var(--purple)}nav{display:flex;gap:27px;align-items:center}nav a{font-size:13px;color:#c4c5ce;transition:.2s}nav a:hover{color:var(--cyan)}.nav-cta{border:1px solid rgba(167,139,250,.55);padding:10px 15px;border-radius:999px;color:white}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:8px 11px}
+.hero{min-height:100vh;display:grid;place-items:center;padding:130px 0 75px;position:relative;isolation:isolate}
+.spotlight{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(650px,90vw);height:460px;pointer-events:none;background:linear-gradient(180deg,rgba(211,218,255,.16),rgba(167,139,250,.035) 52%,transparent);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);filter:blur(2px);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}
+.eyebrow,.kicker{font:11px 'DM Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
+h1{font-size:clamp(43px,6.5vw,82px);line-height:.98;letter-spacing:-.065em;margin:22px 0}.gradient{background:linear-gradient(100deg,#fff 15%,#c5b5ff 55%,#79e6d8);background-clip:text;color:transparent}
+.lead{max-width:570px;color:#b5b7c1;line-height:1.8;font-size:16px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 19px;border-radius:999px;font-weight:600;font-size:13px;transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-4px)}.primary{background:linear-gradient(110deg,#a78bfa,#70e1d1);color:#101118;box-shadow:0 8px 35px rgba(167,139,250,.2)}.ghost{border:1px solid var(--line);color:#eee}
+.hero-note{margin-top:26px;color:#777d8b;font:11px 'DM Mono',monospace}
+.stage{height:475px;position:relative;display:grid;place-items:center;perspective:1000px}
+.orbit{position:absolute;width:360px;height:360px;border:1px solid rgba(167,139,250,.2);border-radius:50%;transform:rotateX(68deg) rotateZ(-18deg);animation:orbit 18s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(112,225,209,.17);border-radius:50%;inset:28px}.orbit:after{inset:65px;border-color:rgba(255,255,255,.1)}
+@keyframes orbit{to{transform:rotateX(68deg) rotateZ(342deg)}}
+.profile-card{width:min(340px,82vw);min-height:365px;padding:25px;border:1px solid rgba(255,255,255,.19);border-radius:22px;background:linear-gradient(145deg,rgba(28,30,43,.94),rgba(11,13,19,.92));box-shadow:0 35px 90px #0009, inset 0 1px rgba(255,255,255,.13);transform-style:preserve-3d;transform:rotateY(-12deg) rotateX(7deg);transition:transform .18s ease-out;position:relative;overflow:hidden}
+.profile-card:before{content:"";position:absolute;inset:-50%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.1) 48%,transparent 56%);transform:translateX(-70%) rotate(15deg);animation:shine 7s ease-in-out infinite}
+@keyframes shine{50%,100%{transform:translateX(70%) rotate(15deg)}}
+.card-top{display:flex;justify-content:space-between;color:#aeb2c0;font:10px 'DM Mono',monospace;letter-spacing:.12em}
+.avatar{height:175px;margin:22px auto 14px;display:grid;place-items:center;position:relative;transform:translateZ(45px)}
+.avatar-glow{position:absolute;width:155px;height:155px;border-radius:50%;background:radial-gradient(circle,#a78bfa66,transparent 70%);filter:blur(8px)}
+.avatar-head{width:94px;height:108px;border-radius:46% 46% 42% 42%;background:linear-gradient(140deg,#f2c5a3,#a96c59);position:relative;z-index:2;box-shadow:inset -12px -5px 0 #744c4b}
+.avatar-head:before{content:"";position:absolute;top:-9px;left:-4px;width:102px;height:43px;border-radius:50% 50% 25% 25%;background:linear-gradient(120deg,#171922,#3a3345);border-bottom:7px solid #171922}
+.avatar-head:after{content:"••";white-space:pre;letter-spacing:24px;position:absolute;top:47px;left:24px;color:#211a1d;font-size:17px}
+.avatar-body{position:absolute;bottom:0;width:180px;height:75px;border-radius:90px 90px 15px 15px;background:linear-gradient(120deg,#272337,#090a11);z-index:1;border:1px solid #ffffff1a}
+.card-name{text-align:center;font-size:21px;font-weight:700;letter-spacing:-.04em;transform:translateZ(35px)}.card-role{text-align:center;color:var(--cyan);font:10px 'DM Mono',monospace;letter-spacing:.13em;margin-top:7px;transform:translateZ(30px)}
+.card-bottom{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;margin-top:22px;color:#a9adba;font:10px 'DM Mono',monospace}
+.float-chip{position:absolute;padding:11px 15px;border:1px solid #ffffff20;background:#111520d9;backdrop-filter:blur(12px);border-radius:12px;font:11px 'DM Mono',monospace;box-shadow:0 15px 40px #0008;animation:float 5s ease-in-out infinite}
+.chip-one{top:55px;left:0;color:var(--cyan)}.chip-two{right:-5px;bottom:76px;color:#d5c7ff;animation-delay:-2s}.chip-three{left:5px;bottom:35px;animation-delay:-3.5s}
+@keyframes float{50%{transform:translateY(-13px) rotate(2deg)}}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font:10px 'DM Mono',monospace;color:#737887;letter-spacing:.2em;display:flex;align-items:center;gap:12px}.scroll-cue:after{content:"";height:28px;width:1px;background:linear-gradient(var(--purple),transparent);position:absolute;top:23px;left:50%}
+section{padding:105px 0;position:relative}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.section-head h2{font-size:clamp(32px,4.5vw,52px);letter-spacing:-.06em;margin:10px 0 0}.section-head p{color:var(--muted);max-width:390px;line-height:1.7;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.glass{background:linear-gradient(145deg,rgba(23,26,37,.88),rgba(12,14,20,.88));border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 18px 50px #0003}.about-copy{color:#b9bbc5;line-height:1.85;font-size:15px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:20px;border-radius:14px;background:#ffffff06;border:1px solid #ffffff0e}.stat strong{font-size:27px;display:block;color:var(--cyan)}.stat span{font-size:11px;color:#9da1ad}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill{padding:23px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#141722,#0c0e14);transition:.3s;transform-style:preserve-3d}.skill:hover{transform:translateY(-8px) rotateX(3deg);border-color:#a78bfa66;box-shadow:0 20px 45px #0006}.skill-icon{font-size:23px;margin-bottom:15px}.skill h3{margin:0 0 9px;font-size:17px}.skill p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.timeline{display:grid;gap:14px}.job{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:24px 26px;border:1px solid var(--line);border-radius:16px;background:#10131bd9;transition:.3s}.job:hover{border-color:#70e1d155;transform:translateX(5px)}.date{font:11px 'DM Mono',monospace;color:var(--cyan);padding-top:5px}.job h3{margin:0 0 5px;font-size:18px}.job .company{color:#a8aab5;font-size:13px}.job p{color:#aeb1bc;font-size:13px;line-height:1.7;margin:12px 0 0}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{overflow:hidden;border-radius:17px;border:1px solid var(--line);background:#11141d;transition:.35s}.project:hover{transform:translateY(-8px) rotateX(2deg);box-shadow:0 25px 55px #0008}.project-art{height:190px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,#514277,#151824 58%,#0c0e14)}.project-art:before,.project-art:after{content:"";position:absolute;border:1px solid #ffffff26;border-radius:50%;width:230px;height:230px;transform:rotateX(65deg)}.project-art:after{width:155px;height:155px;border-color:#70e1d155}.project-window{position:relative;z-index:1;width:72%;height:110px;border:1px solid #ffffff55;border-radius:8px;background:#0b0e16e8;padding:12px;box-shadow:0 15px 40px #0008;transform:rotateY(-12deg) rotateX(5deg)}.window-dots{display:flex;gap:4px}.window-dots i{width:5px;height:5px;border-radius:50%;background:#a78bfa}.window-lines{height:6px;width:65%;background:#ffffff24;border-radius:4px;margin-top:13px}.window-lines.short{width:38%;margin-top:8px}.project-info{padding:22px}.project-info h3{margin:0 0 8px}.project-info p{color:var(--muted);font-size:13px;line-height:1.7;margin:0 0 14px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{font:10px 'DM Mono',monospace;color:#d1c6ff;border:1px solid #a78bfa44;border-radius:999px;padding:6px 9px}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:linear-gradient(115deg,#1b1a2b,#101c21);border:1px solid #ffffff1b;border-radius:22px;padding:clamp(25px,5vw,55px);overflow:hidden;position:relative}.contact-box:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-100px;top:-160px;background:#a78bfa26;filter:blur(50px)}.contact-box h2{font-size:clamp(34px,5vw,56px);letter-spacing:-.06em;margin:12px 0}.contact-box p{color:#b4b7c1;line-height:1.7}.contact-details{position:relative;z-index:1;display:grid;gap:13px}.contact-line{padding:15px 17px;border:1px solid #ffffff20;background:#080a10a8;border-radius:12px}.contact-line small{display:block;color:#9298a6;font:10px 'DM Mono',monospace;letter-spacing:.12em;margin-bottom:6px}.contact-line strong{font-size:14px;overflow-wrap:anywhere}
+footer{padding:28px 0;border-top:1px solid var(--line);color:#777d89;font:11px 'DM Mono',monospace}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-copy{display:flex;align-items:center;flex-direction:column}.stage{height:420px}.hero{padding-top:115px}.about-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:12px}.contact-box{grid-template-columns:1fr}}
+@media(max-width:620px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:66px}nav{display:none;position:absolute;top:65px;left:15px;right:15px;padding:18px;background:#10131bf5;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch;gap:17px}nav.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{min-height:auto;padding:125px 0 70px}.stage{height:370px}.orbit{width:290px;height:290px}.profile-card{min-height:335px;width:290px}.chip-one{left:-3px}.chip-two{right:-3px}.skills-grid,.projects{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:8px;padding:20px}.job .date{padding:0}.section-head h2{font-size:36px}section{padding:75px 0}.scroll-cue{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<header id="header"><div class="wrap nav">
+  <a class="brand" href="#home">JB<span>.</span></a>
+  <nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
+  <a class="nav-cta" href="#contact">Let's talk ↗</a><button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home">
+  <div class="spotlight"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">CUSTOMER SUPPORT · CREATIVE · WEB</div>
+      <h1>Hi, I'm<br><span class="gradient">Jhules Bryan.</span></h1>
+      <p class="lead">I help businesses create better customer experiences and build a stronger online presence through customer support, virtual assistance, social media design, and modern websites.</p>
+      <div class="hero-actions"><a class="btn primary" href="#work">Explore my work <span>↗</span></a><a class="btn ghost" href="#contact">Get in touch</a></div>
+      <div class="hero-note">BASED IN THE PHILIPPINES · OPEN TO OPPORTUNITIES</div>
+    </div>
+    <div class="stage reveal" id="stage">
+      <div class="orbit"></div>
+      <div class="float-chip chip-one">✦ CUSTOMER FIRST</div>
+      <div class="float-chip chip-two">✧ CREATIVE THINKING</div>
+      <div class="float-chip chip-three">WEB · DESIGN · SUPPORT</div>
+      <div class="profile-card" id="tiltCard">
+        <div class="card-top"><span>PERSONAL PORTFOLIO</span><span>01 / 26</span></div>
+        <div class="avatar"><div class="avatar-glow"></div><div class="avatar-head"></div><div class="avatar-body"></div></div>
+        <div class="card-name">Jhules Bryan Awali</div>
+        <div class="card-role">CUSTOMER SUPPORT & DIGITAL CREATIVE</div>
+        <div class="card-bottom"><span>AVAILABLE FOR WORK</span><span>PH 🇵🇭</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL TO EXPLORE</div>
+</section>
+<section id="about"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">01 / ABOUT ME</div><h2>People skills meet<br><span class="gradient">digital creativity.</span></h2></div><p>A versatile professional focused on clear communication, reliable support, and thoughtful digital experiences.</p></div>
+  <div class="about-grid">
+    <div class="glass reveal"><p class="about-copy">I'm Jhules Bryan Awali, based in the Philippines. My background includes financial account customer service, social media management, graphic design, sales, and virtual assistance. I enjoy solving problems, helping customers, and turning ideas into useful digital content and websites. I'm continuously improving my web development skills and exploring practical AI tools to work smarter.</p><p class="about-copy">My approach is simple: understand the goal, communicate clearly, and deliver work with care and consistency.</p></div>
+    <div class="glass stat-grid reveal"><div class="stat"><strong>2+</strong><span>Years in customer service</span></div><div class="stat"><strong>360°</strong><span>Customer-first mindset</span></div><div class="stat"><strong>4+</strong><span>Digital skill areas</span></div><div class="stat"><strong>∞</strong><span>Always learning</span></div></div>
+  </div>
+</div></section>
+<section id="skills"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">02 / WHAT I DO</div><h2>Skills & services</h2></div><p>A mix of customer-facing experience and creative digital skills to support growing businesses.</p></div>
+  <div class="skills-grid">
+    <article class="skill reveal"><div class="skill-icon">◈</div><h3>Customer Support</h3><p>Customer inquiries, financial account assistance, billing and transaction support, account updates, and issue resolution.</p></article>
+    <article class="skill reveal"><div class="skill-icon">⌘</div><h3>Virtual Assistance</h3><p>Administrative support, online research, data organization, email assistance, and day-to-day task coordination.</p></article>
+    <article class="skill reveal"><div class="skill-icon">✳</div><h3>Social Media Management</h3><p>Content planning, captions, hashtags, page management, brand messaging, and audience engagement.</p></article>
+    <article class="skill reveal"><div class="skill-icon">▧</div><h3>Graphic Design</h3><p>Promotional graphics, social posts, banners, flyers, photo editing, and visual content using Canva.</p></article>
+    <article class="skill reveal"><div class="skill-icon">⌁</div><h3>Web Development</h3><p>Building responsive websites with HTML, CSS, and JavaScript; learning through hands-on projects.</p></article>
+    <article class="skill reveal"><div class="skill-icon">✧</div><h3>AI-Assisted Work</h3><p>Using AI tools for research, brainstorming, writing support, content ideas, and workflow productivity.</p></article>
+  </div>
+</div></section>
+<section id="experience"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">03 / MY JOURNEY</div><h2>Work experience</h2></div><p>Experience across financial customer service, social media, design, and sales.</p></div>
+  <div class="timeline">
+    <article class="job reveal"><div class="date">JAN 2026 — JUN 2026</div><div><h3>Customer Service Representative — International Financial Account</h3><div class="company">NTT DATA</div><p>Assisted customers with card and account services, billing, transactions, account updates, and disputed or unauthorized transaction concerns while following privacy and security procedures.</p></div></article>
+    <article class="job reveal"><div class="date">OCT 2024 — DEC 2025</div><div><h3>Social Media Manager / Graphic Designer</h3><div class="company">Freelance</div><p>Managed social media content, created promotional graphics and branded materials, prepared captions and hashtags, supported content calendars, and edited photos for digital platforms.</p></div></article>
+    <article class="job reveal"><div class="date">APR 2022 — JUN 2024</div><div><h3>Financial Account Representative</h3><div class="company">Teleperformance</div><p>Handled debit and credit card inquiries, transaction support, billing and balance questions, account maintenance, verification, and fraud-related concerns using CRM and support tools.</p></div></article>
+    <article class="job reveal"><div class="date">JAN 2019 — MAR 2021</div><div><h3>Sales Agent · Sales Supervisor</h3><div class="company">New San Jose Builders</div><p>Supported property sales activities, assisted prospective buyers, and took on team supervision responsibilities.</p></div></article>
+  </div>
+</div></section>
+<section id="work"><div class="wrap">
+  <div class="section-head reveal"><div><div class="kicker">04 / SELECTED WORK</div><h2>Things I've worked on</h2></div><p>A few areas where I bring ideas to life. Replace or connect these preview cards to your actual project screenshots and live links.</p></div>
+  <div class="projects">
+    <article class="project reveal"><div class="project-art"><div class="project-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-lines"></div><div class="window-lines short"></div><div class="window-lines"></div></div></div><div class="project-info"><h3>Personal Portfolio Website</h3><p>A responsive portfolio concept showcasing services, professional experience, and selected work with 3D-inspired motion.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
+    <article class="project reveal"><div class="project-art" style="background:radial-gradient(circle at 50% 45%,#235b59,#151824 58%,#0c0e14)"><div class="project-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-lines"></div><div class="window-lines short"></div><div class="window-lines"></div></div></div><div class="project-info"><h3>Social Media Creatives</h3><p>Promotional layouts, branded posts, banners, and digital content designed for social media platforms.</p><div class="tags"><span>Canva</span><span>Content Design</span><span>Branding</span></div></div></article>
+    <article class="project reveal"><div class="project-art" style="background:radial-gradient(circle at 50% 45%,#59412c,#151824 58%,#0c0e14)"><div class="project-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-lines"></div><div class="window-lines short"></div><div class="window-lines"></div></div></div><div class="project-info"><h3>Customer Support Workflow</h3><p>Examples of customer communication, account assistance, inquiry handling, and organized support processes.</p><div class="tags"><span>Customer Service</span><span>CRM</span><span>Communication</span></div></div></article>
+    <article class="project reveal"><div class="project-art" style="background:radial-gradient(circle at 50% 45%,#3b3970,#151824 58%,#0c0e14)"><div class="project-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="window-lines"></div><div class="window-lines short"></div><div class="window-lines"></div></div></div><div class="project-info"><h3>GAMEPH — Game Download Hub</h3><p>A personal web project exploring navigation, content organization, responsive layouts, and front-end development.</p><div class="tags"><span>Web Design</span><span>HTML</span><span>GitHub Pages</span></div></div></article>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap">
+  <div class="contact-box reveal">
+    <div><div class="kicker">05 / CONTACT</div><h2>Let's create<br><span class="gradient">something useful.</span></h2><p>Have a project, opportunity, or question? Feel free to reach out. I'd be happy to connect.</p></div>
+    <div class="contact-details">
+      <div class="contact-line"><small>EMAIL</small><strong>JBAWALI30@GMAIL.COM</strong></div>
+      <div class="contact-line"><small>PHONE</small><strong>0969 437 9046</strong></div>
+      <div class="contact-line"><small>LOCATION</small><strong>Philippines</strong></div>
+      <div class="contact-line"><small>PORTFOLIO FOCUS</small><strong>Customer Support · Digital Creative · Web</strong></div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> JHULES BRYAN AWALI</span><span>DESIGNED WITH PURPOSE · BUILT WITH HTML, CSS & JS</span></div></footer>
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20),{passive:true});
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const stage=document.getElementById('stage'),card=document.getElementById('tiltCard');
+if(window.matchMedia('(pointer:fine)').matches){
+stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`rotateY(${-12+x*22}deg) rotateX(${7-y*18}deg) translateZ(8px)`});
+stage.addEventListener('pointerleave',()=>card.style.transform='rotateY(-12deg) rotateX(7deg)');
+}
+</script>
+</body>
+</html>
